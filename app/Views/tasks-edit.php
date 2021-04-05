@@ -16,11 +16,11 @@
         <input name="id" type="hidden" value="<?= $task->id; ?>">
         <div class="form-group">
             <label for="inputName">Имя</label>
-            <input name="name" type="text" class="form-control" id="inputName" value="<?= htmlentities($task->name); ?>" required>
+            <input type="text" class="form-control" id="inputName" value="<?= htmlentities($task->name); ?>" readonly>
         </div>
         <div class="form-group">
             <label for="inputEmail">Email</label>
-            <input name="email" type="email" class="form-control" id="inputEmail" value="<?= htmlentities($task->email); ?>" required>
+            <input type="email" class="form-control" id="inputEmail" value="<?= htmlentities($task->email); ?>" readonly>
         </div>
         <div class="form-group">
             <label for="inputText">Текст</label>

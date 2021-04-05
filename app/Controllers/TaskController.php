@@ -100,17 +100,15 @@ class TaskController extends Controller
             return;
         }
 
-        $error = $this->validate($_POST);
-        if ($error !== false) {
-            redirect(base_url('add'), $error);
+        if (empty($_POST['text'])) {
+            redirect(base_url('add'), 'Текст обязательное поля');
+            return;
         }
 
-        $name = $_POST['name'];
-        $email = $_POST['email'];
         $text = $_POST['text'];
         $id = $_POST['id'];
 
-        $task->update($id, $name, $email, $text);
+        $task->update($id, $text);
 
         redirect(base_url(''));
     }

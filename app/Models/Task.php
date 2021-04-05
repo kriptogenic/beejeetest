@@ -37,10 +37,10 @@ class Task
         return $this->pdo->prepare($query)->execute([$name, $email, $text]);
     }
 
-    public function update(int $id, string $name, string $email, string $text): bool
+    public function update(int $id, string $text): bool
     {
-        $query = 'UPDATE tasks SET name = ?, email = ?, text = ?, edited = 1 WHERE id = ?';
-        return $this->pdo->prepare($query)->execute([$name, $email, $text, $id]);
+        $query = 'UPDATE tasks SET text = ?, edited = 1 WHERE id = ?';
+        return $this->pdo->prepare($query)->execute([$text, $id]);
     }
 
     public function done(int $id): bool

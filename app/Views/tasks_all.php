@@ -53,7 +53,7 @@
                     <span class="badge badge-success">Выполнен</span>
                 <?php endif; ?>
                 <?php if ($task->edited == 1): ?>
-                <span class="badge badge-warning">изменён</span>
+                <span class="badge badge-warning">отредактировано администратором</span>
                 <?php endif; ?>
             </td>
             <td>
